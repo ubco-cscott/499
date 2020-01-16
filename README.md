@@ -1,2 +1,2 @@
 # 499
-capstone project repo project
+capstone project repo
