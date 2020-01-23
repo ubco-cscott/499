@@ -3432,6 +3432,102 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </deviceset>
 </devicesets>
 </library>
+<library name="Captsone_L1">
+<packages>
+<package name="CSRM100">
+<description>this is the schematic for the CRSM100 reciever modual</description>
+<wire x1="0" y1="0" x2="0" y2="36.8" width="0.127" layer="21"/>
+<wire x1="0" y1="36.8" x2="30.2" y2="36.8" width="0.127" layer="21"/>
+<wire x1="30.2" y1="36.8" x2="30.2" y2="0" width="0.127" layer="21"/>
+<wire x1="30.2" y1="0" x2="0" y2="0" width="0.127" layer="21"/>
+<pad name="P$1" x="23.1" y="3.4" drill="0.6"/>
+<pad name="P$2" x="21.1" y="3.4" drill="0.6"/>
+<pad name="P$3" x="19.1" y="3.4" drill="0.6"/>
+<pad name="P$4" x="17.1" y="3.4" drill="0.6"/>
+<pad name="P$5" x="15.1" y="3.4" drill="0.6"/>
+<pad name="P$6" x="13.1" y="3.4" drill="0.6"/>
+<pad name="P$7" x="11.1" y="3.4" drill="0.6"/>
+<pad name="P$8" x="9.1" y="3.4" drill="0.6"/>
+<pad name="P$9" x="7.1" y="3.4" drill="0.6"/>
+<pad name="P$10" x="5.1" y="3.4" drill="0.6"/>
+<pad name="P$11" x="23.1" y="33.4" drill="0.6"/>
+<pad name="P$12" x="21.1" y="33.4" drill="0.6"/>
+<pad name="P$13" x="19.1" y="33.4" drill="0.6"/>
+<pad name="P$14" x="17.1" y="33.4" drill="0.6"/>
+<pad name="P$15" x="15.1" y="33.4" drill="0.6"/>
+<pad name="P$16" x="13.1" y="33.4" drill="0.6"/>
+<pad name="P$17" x="11.1" y="33.4" drill="0.6"/>
+<pad name="P$18" x="9.1" y="33.4" drill="0.6"/>
+<pad name="P$19" x="7.1" y="33.4" drill="0.6"/>
+</package>
+</packages>
+<symbols>
+<symbol name="CSRM100">
+<description>20 pin reciver module supplied by ws Technolagies
+see https://www.wst.ca/csrm.html for info</description>
+<wire x1="-12.7" y1="12.7" x2="-12.7" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-15.24" x2="17.78" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="17.78" y1="-15.24" x2="17.78" y2="12.7" width="0.254" layer="94"/>
+<wire x1="17.78" y1="12.7" x2="-12.7" y2="12.7" width="0.254" layer="94"/>
+<pin name="GND" x="-17.78" y="10.16" length="middle"/>
+<pin name="PPS" x="-17.78" y="7.62" length="middle"/>
+<pin name="RX1" x="-17.78" y="5.08" length="middle"/>
+<pin name="TX1" x="-17.78" y="2.54" length="middle"/>
+<pin name="TX2" x="-17.78" y="0" length="middle"/>
+<pin name="RX2" x="-17.78" y="-2.54" length="middle"/>
+<pin name="RESET" x="-17.78" y="-5.08" length="middle"/>
+<pin name="GND1" x="-17.78" y="-7.62" length="middle"/>
+<pin name="RFIN" x="-17.78" y="-10.16" length="middle"/>
+<pin name="GND2" x="-17.78" y="-12.7" length="middle"/>
+<pin name="GND3" x="22.86" y="-10.16" length="middle" rot="R180"/>
+<pin name="PWR" x="22.86" y="-7.62" length="middle" rot="R180"/>
+<pin name="EN" x="22.86" y="-5.08" length="middle" rot="R180"/>
+<pin name="LED" x="22.86" y="-2.54" length="middle" rot="R180"/>
+<pin name="GPIO1" x="22.86" y="0" length="middle" rot="R180"/>
+<pin name="GPIO2" x="22.86" y="2.54" length="middle" rot="R180"/>
+<pin name="GPIO3" x="22.86" y="5.08" length="middle" rot="R180"/>
+<pin name="OSCOUT" x="22.86" y="7.62" length="middle" rot="R180"/>
+<pin name="GND4" x="22.86" y="10.16" length="middle" rot="R180"/>
+<text x="-2.54" y="-2.54" size="1.778" layer="95">csrm100</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="CSRM100">
+<description>This is the pakage for the CSRM100 reciever modual</description>
+<gates>
+<gate name="G$1" symbol="CSRM100" x="-10.16" y="2.54"/>
+</gates>
+<devices>
+<device name="" package="CSRM100">
+<connects>
+<connect gate="G$1" pin="EN" pad="P$17"/>
+<connect gate="G$1" pin="GND" pad="P$1"/>
+<connect gate="G$1" pin="GND1" pad="P$8"/>
+<connect gate="G$1" pin="GND2" pad="P$10"/>
+<connect gate="G$1" pin="GND3" pad="P$11"/>
+<connect gate="G$1" pin="GND4" pad="P$19"/>
+<connect gate="G$1" pin="GPIO1" pad="P$15"/>
+<connect gate="G$1" pin="GPIO2" pad="P$14"/>
+<connect gate="G$1" pin="GPIO3" pad="P$13"/>
+<connect gate="G$1" pin="LED" pad="P$16"/>
+<connect gate="G$1" pin="OSCOUT" pad="P$12"/>
+<connect gate="G$1" pin="PPS" pad="P$2"/>
+<connect gate="G$1" pin="PWR" pad="P$18"/>
+<connect gate="G$1" pin="RESET" pad="P$7"/>
+<connect gate="G$1" pin="RFIN" pad="P$9"/>
+<connect gate="G$1" pin="RX1" pad="P$3"/>
+<connect gate="G$1" pin="RX2" pad="P$6"/>
+<connect gate="G$1" pin="TX1" pad="P$4"/>
+<connect gate="G$1" pin="TX2" pad="P$5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3458,6 +3554,7 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <part name="GND4" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device=""/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0402-1/16W-1%" package3d_urn="urn:adsk.eagle:package:39657/1" value="100K"/>
 <part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="26.7KOHM" device="0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="26.7k"/>
+<part name="U$3" library="Captsone_L1" deviceset="CSRM100" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3522,6 +3619,7 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <attribute name="NAME" x="-120.904" y="-76.2" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="-117.856" y="-76.2" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
+<instance part="U$3" gate="G$1" x="-111.76" y="114.3" smashed="yes"/>
 </instances>
 <busses>
 </busses>
