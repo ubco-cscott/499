@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -607,6 +607,41 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <vertex x="1.5875" y="1.27" curve="90"/>
 </polygon>
 </package>
+<package name="CSRM">
+<pad name="GND1" x="0" y="0" drill="0.65" diameter="1.4224"/>
+<pad name="PPS" x="0" y="-2" drill="0.65" diameter="1.4224"/>
+<pad name="RX1" x="0" y="-4" drill="0.65" diameter="1.4224"/>
+<pad name="TX1" x="0" y="-6" drill="0.65" diameter="1.4224"/>
+<pad name="TX2" x="0" y="-8" drill="0.65" diameter="1.4224"/>
+<pad name="RX2" x="0" y="-10" drill="0.65" diameter="1.4224"/>
+<pad name="_RESET" x="0" y="-12" drill="0.65" diameter="1.4224"/>
+<pad name="GND2" x="0" y="-14" drill="0.65" diameter="1.4224"/>
+<pad name="406_IN" x="0" y="-16" drill="0.65" diameter="1.4224"/>
+<pad name="GND3" x="0" y="-18" drill="0.65" diameter="1.4224"/>
+<pad name="GND" x="30" y="-16" drill="0.65" diameter="1.4224"/>
+<pad name="PWR_IN" x="30" y="-14" drill="0.65" diameter="1.4224"/>
+<pad name="EN" x="30" y="-12" drill="0.65" diameter="1.4224"/>
+<pad name="LED" x="30" y="-10" drill="0.65" diameter="1.4224"/>
+<pad name="GPIO1" x="30" y="-8" drill="0.65" diameter="1.4224"/>
+<pad name="GPIO2" x="30" y="-6" drill="0.65" diameter="1.4224"/>
+<pad name="GPIO3" x="30" y="-4" drill="0.65" diameter="1.4224"/>
+<pad name="OSC_OUT" x="30" y="-2" drill="0.65" diameter="1.4224"/>
+<pad name="GND4" x="30" y="0" drill="0.65" diameter="1.4224"/>
+<wire x1="-0.9" y1="7.1" x2="30.9" y2="7.1" width="0.127" layer="21"/>
+<wire x1="30.9" y1="7.1" x2="33.4" y2="4.6" width="0.127" layer="21" curve="-90"/>
+<wire x1="33.4" y1="4.6" x2="33.4" y2="-20.6" width="0.127" layer="21"/>
+<wire x1="33.4" y1="-20.6" x2="30.9" y2="-23.1" width="0.127" layer="21" curve="-90"/>
+<wire x1="-3.4" y1="4.6" x2="-3.4" y2="-20.6" width="0.127" layer="21"/>
+<wire x1="-3.4" y1="-20.6" x2="-0.9" y2="-23.1" width="0.127" layer="21" curve="90"/>
+<wire x1="-0.9" y1="-23.1" x2="30.9" y2="-23.1" width="0.127" layer="21"/>
+<wire x1="-0.9" y1="7.1" x2="-3.4" y2="4.6" width="0.127" layer="21" curve="90"/>
+<text x="15" y="-8" size="2.54" layer="21" align="bottom-center">CSRM100</text>
+<polygon width="0.0762" layer="21">
+<vertex x="-1.778" y="0"/>
+<vertex x="-3.302" y="1.524"/>
+<vertex x="-3.302" y="-1.524"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="DSPIC33FJ256MC510">
@@ -718,18 +753,41 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <pin name="RC9" x="10.16" y="53.34" length="middle" rot="R270"/>
 </symbol>
 <symbol name="RT8258">
-<pin name="P$1" x="-10.16" y="5.08" visible="pad" length="middle"/>
-<pin name="P$2" x="-10.16" y="0" visible="pad" length="middle"/>
-<pin name="P$3" x="-10.16" y="-5.08" visible="pad" length="middle"/>
-<pin name="P$4" x="10.16" y="-5.08" visible="pad" length="middle" rot="R180"/>
-<pin name="P$5" x="10.16" y="0" visible="pad" length="middle" rot="R180"/>
-<pin name="P$6" x="10.16" y="5.08" visible="pad" length="middle" rot="R180"/>
-<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-7.62" x2="5.08" y2="7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<pin name="BOOT" x="15.24" y="0" visible="pin" length="middle" rot="R180"/>
+<pin name="GND" x="-12.7" y="-5.08" visible="pin" length="middle"/>
+<pin name="FB" x="15.24" y="-5.08" visible="pin" length="middle" rot="R180"/>
+<pin name="EN" x="-12.7" y="0" visible="pin" length="middle"/>
+<pin name="VIN" x="-12.7" y="5.08" visible="pin" length="middle"/>
+<pin name="PHASE" x="15.24" y="5.08" visible="pin" length="middle" rot="R180"/>
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
 <text x="0" y="8.89" size="1.27" layer="95" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-8.89" size="1.27" layer="96" align="top-center">&gt;VALUE</text>
+</symbol>
+<symbol name="CSRM100">
+<pin name="GND" x="-5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="PPS" x="17.78" y="7.62" length="middle" rot="R180"/>
+<pin name="RX1" x="-22.86" y="-5.08" length="middle"/>
+<pin name="TX1" x="-22.86" y="-2.54" length="middle"/>
+<pin name="TX2" x="-22.86" y="-12.7" length="middle"/>
+<pin name="RX2" x="-22.86" y="-10.16" length="middle"/>
+<pin name="RESET" x="0" y="-20.32" length="middle" rot="R90"/>
+<pin name="RF_IN" x="-2.54" y="17.78" length="middle" rot="R270"/>
+<pin name="3.3V+" x="-22.86" y="7.62" length="middle"/>
+<pin name="EN" x="-22.86" y="2.54" length="middle"/>
+<pin name="LED" x="17.78" y="2.54" length="middle" rot="R180"/>
+<pin name="GPIO1" x="17.78" y="-7.62" length="middle" rot="R180"/>
+<pin name="GPIO2" x="17.78" y="-10.16" length="middle" rot="R180"/>
+<pin name="GPIO3" x="17.78" y="-12.7" length="middle" rot="R180"/>
+<pin name="OSC" x="17.78" y="-2.54" length="middle" rot="R180"/>
+<wire x1="-17.78" y1="12.7" x2="-17.78" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-17.78" y1="-15.24" x2="12.7" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="12.7" y1="-15.24" x2="12.7" y2="12.7" width="0.254" layer="94"/>
+<wire x1="12.7" y1="12.7" x2="-17.78" y2="12.7" width="0.254" layer="94"/>
+<text x="-17.78" y="13.208" size="2.54" layer="95">&gt;NAME</text>
+<text x="12.7" y="13.208" size="2.54" layer="96" align="bottom-right">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -848,6 +906,26 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 </devices>
 </deviceset>
 <deviceset name="RT8258">
+<gates>
+<gate name="G$1" symbol="RT8258" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-6">
+<connects>
+<connect gate="G$1" pin="BOOT" pad="1"/>
+<connect gate="G$1" pin="EN" pad="4"/>
+<connect gate="G$1" pin="FB" pad="3"/>
+<connect gate="G$1" pin="GND" pad="2"/>
+<connect gate="G$1" pin="PHASE" pad="6"/>
+<connect gate="G$1" pin="VIN" pad="5"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="CSRM100">
 <gates>
 </gates>
 <devices>

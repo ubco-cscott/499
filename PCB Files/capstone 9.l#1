@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="5" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="16" fill="1" visible="no" active="yes"/>
@@ -766,6 +766,29 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <text x="0" y="8.89" size="1.27" layer="95" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-8.89" size="1.27" layer="96" align="top-center">&gt;VALUE</text>
 </symbol>
+<symbol name="CSRM100">
+<pin name="GND" x="-2.54" y="-20.32" visible="pin" length="middle" rot="R90"/>
+<pin name="PPS" x="20.32" y="7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="RX1" x="-20.32" y="-5.08" visible="pin" length="middle"/>
+<pin name="TX1" x="-20.32" y="-2.54" visible="pin" length="middle"/>
+<pin name="TX2" x="-20.32" y="-12.7" length="middle"/>
+<pin name="RX2" x="-20.32" y="-10.16" visible="pin" length="middle"/>
+<pin name="RESET" x="2.54" y="-20.32" visible="pin" length="middle" rot="R90"/>
+<pin name="RF_IN" x="0" y="17.78" visible="pin" length="middle" rot="R270"/>
+<pin name="3.3V+" x="-20.32" y="7.62" visible="pin" length="middle"/>
+<pin name="EN" x="-20.32" y="2.54" visible="pin" length="middle"/>
+<pin name="LED" x="20.32" y="2.54" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO1" x="20.32" y="-7.62" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO2" x="20.32" y="-10.16" visible="pin" length="middle" rot="R180"/>
+<pin name="GPIO3" x="20.32" y="-12.7" visible="pin" length="middle" rot="R180"/>
+<pin name="OSC" x="20.32" y="-2.54" visible="pin" length="middle" rot="R180"/>
+<wire x1="-15.24" y1="12.7" x2="-15.24" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="-15.24" y1="-15.24" x2="15.24" y2="-15.24" width="0.254" layer="94"/>
+<wire x1="15.24" y1="-15.24" x2="15.24" y2="12.7" width="0.254" layer="94"/>
+<wire x1="15.24" y1="12.7" x2="-15.24" y2="12.7" width="0.254" layer="94"/>
+<text x="-15.24" y="13.208" size="2.54" layer="95">&gt;NAME</text>
+<text x="15.24" y="13.208" size="2.54" layer="96" align="bottom-right">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="DSPIC33EP512GM310">
@@ -904,9 +927,27 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 </deviceset>
 <deviceset name="CSRM100">
 <gates>
+<gate name="G$1" symbol="CSRM100" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="CSRM">
+<connects>
+<connect gate="G$1" pin="3.3V+" pad="PWR_IN"/>
+<connect gate="G$1" pin="EN" pad="EN"/>
+<connect gate="G$1" pin="GND" pad="GND GND1 GND2 GND3 GND4"/>
+<connect gate="G$1" pin="GPIO1" pad="GPIO1"/>
+<connect gate="G$1" pin="GPIO2" pad="GPIO2"/>
+<connect gate="G$1" pin="GPIO3" pad="GPIO3"/>
+<connect gate="G$1" pin="LED" pad="LED"/>
+<connect gate="G$1" pin="OSC" pad="OSC_OUT"/>
+<connect gate="G$1" pin="PPS" pad="PPS"/>
+<connect gate="G$1" pin="RESET" pad="_RESET"/>
+<connect gate="G$1" pin="RF_IN" pad="406_IN"/>
+<connect gate="G$1" pin="RX1" pad="RX1"/>
+<connect gate="G$1" pin="RX2" pad="RX2"/>
+<connect gate="G$1" pin="TX1" pad="TX1"/>
+<connect gate="G$1" pin="TX2" pad="TX2"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>
