@@ -3610,9 +3610,9 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 <attribute name="NAME" x="125.476" y="165.1" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
 <attribute name="VALUE" x="128.524" y="165.1" size="1.778" layer="96" font="vector" rot="R90" align="top-center"/>
 </instance>
-<instance part="U$3" gate="G$1" x="88.9" y="63.5" smashed="yes">
-<attribute name="NAME" x="73.66" y="76.708" size="2.54" layer="95"/>
-<attribute name="VALUE" x="106.68" y="76.708" size="2.54" layer="96" align="bottom-right"/>
+<instance part="U$3" gate="G$1" x="73.66" y="71.12" smashed="yes">
+<attribute name="NAME" x="58.42" y="84.328" size="2.54" layer="95"/>
+<attribute name="VALUE" x="91.44" y="84.328" size="2.54" layer="96" align="bottom-right"/>
 </instance>
 </instances>
 <busses>
