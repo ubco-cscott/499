@@ -1,4 +1,5 @@
-#list of files for git to ignore, such as the hourly backups of the schematic and board files. 
+#list of files for git to ignore, such as the hourly backups of the schematic, board, and library files. 
 **.s#[0-9]
 **.b#[0-9]
+**.l#[0-9]
 .DS_Store
