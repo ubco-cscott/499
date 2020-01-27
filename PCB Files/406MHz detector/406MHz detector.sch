@@ -4638,6 +4638,51 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="132.08" y="116.84" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="U2" gate="U$1" pin="PD0(RXD)"/>
+<pinref part="U3" gate="G$1" pin="!CS"/>
+<wire x1="228.6" y1="114.3" x2="256.54" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="114.3" x2="256.54" y2="88.9" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="U2" gate="U$1" pin="PD2(INT0)"/>
+<pinref part="U3" gate="G$1" pin="SI(D0)"/>
+<wire x1="228.6" y1="109.22" x2="292.1" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="292.1" y1="109.22" x2="292.1" y2="88.9" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="VCC"/>
+<wire x1="292.1" y1="88.9" x2="292.1" y2="86.36" width="0.1524" layer="91"/>
+<junction x="292.1" y="88.9"/>
+<pinref part="U3" gate="G$1" pin="!HOLD(D3)"/>
+<wire x1="292.1" y1="86.36" x2="292.1" y2="83.82" width="0.1524" layer="91"/>
+<junction x="292.1" y="86.36"/>
+<pinref part="U3" gate="G$1" pin="SCK"/>
+<wire x1="292.1" y1="83.82" x2="292.1" y2="81.28" width="0.1524" layer="91"/>
+<junction x="292.1" y="83.82"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="U3" gate="G$1" pin="GND"/>
+<wire x1="256.54" y1="81.28" x2="256.54" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="63.5" x2="180.34" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="U2" gate="U$1" pin="GND@PAD"/>
+<wire x1="180.34" y1="63.5" x2="180.34" y2="78.74" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="U2" gate="U$1" pin="PB7(XTAL2/TOSC2)"/>
+<wire x1="180.34" y1="106.68" x2="160.02" y2="106.68" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="106.68" x2="160.02" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="160.02" y1="40.64" x2="246.38" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="40.64" x2="246.38" y2="86.36" width="0.1524" layer="91"/>
+<pinref part="U3" gate="G$1" pin="SO(D1)"/>
+<wire x1="246.38" y1="86.36" x2="256.54" y2="86.36" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
