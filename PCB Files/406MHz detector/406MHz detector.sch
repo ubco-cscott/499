@@ -4205,6 +4205,16 @@ LED Ring</description>
 <sheets>
 <sheet>
 <plain>
+<wire x1="0" y1="0" x2="0" y2="381" width="0.1524" layer="150"/>
+<wire x1="0" y1="381" x2="508" y2="381" width="0.1524" layer="150"/>
+<wire x1="508" y1="381" x2="508" y2="0" width="0.1524" layer="150"/>
+<wire x1="508" y1="0" x2="0" y2="0" width="0.1524" layer="150"/>
+<wire x1="508" y1="381" x2="1016" y2="381" width="0.1524" layer="150"/>
+<wire x1="1016" y1="381" x2="1016" y2="0" width="0.1524" layer="150"/>
+<wire x1="1016" y1="0" x2="508" y2="0" width="0.1524" layer="150"/>
+<wire x1="1016" y1="381" x2="1524" y2="381" width="0.1524" layer="150"/>
+<wire x1="1524" y1="381" x2="1524" y2="0" width="0.1524" layer="150"/>
+<wire x1="1524" y1="0" x2="1016" y2="0" width="0.1524" layer="150"/>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="312.42" y="175.26" smashed="yes">
