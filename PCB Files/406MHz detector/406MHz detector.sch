@@ -4579,6 +4579,38 @@ LED Ring</description>
 <label x="132.08" y="116.84" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
+<net name="N$15" class="0">
+<segment>
+<pinref part="D2" gate="G$1" pin="1"/>
+<wire x1="177.8" y1="99.06" x2="167.64" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="167.64" y1="99.06" x2="167.64" y2="109.22" width="0.1524" layer="91"/>
+<pinref part="D2" gate="G$1" pin="4"/>
+<wire x1="167.64" y1="109.22" x2="177.8" y2="109.22" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$16" class="0">
+<segment>
+<pinref part="D2" gate="G$1" pin="9"/>
+<wire x1="208.28" y1="93.98" x2="215.9" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="D2" gate="G$1" pin="8"/>
+<wire x1="215.9" y1="93.98" x2="215.9" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="215.9" y1="99.06" x2="208.28" y2="99.06" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$17" class="0">
+<segment>
+<pinref part="D2" gate="G$1" pin="12"/>
+<pinref part="D2" gate="G$1" pin="COM2"/>
+<wire x1="223.52" y1="83.82" x2="208.28" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="83.82" x2="208.28" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$18" class="0">
+<segment>
+<pinref part="D2" gate="G$1" pin="COM3"/>
+<wire x1="177.8" y1="81.28" x2="165.1" y2="81.28" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
