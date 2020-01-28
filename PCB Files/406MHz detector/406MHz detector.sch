@@ -3929,6 +3929,9 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <wire x1="1016" y1="381" x2="1524" y2="381" width="0.1524" layer="150"/>
 <wire x1="1524" y1="381" x2="1524" y2="0" width="0.1524" layer="150"/>
 <wire x1="1524" y1="0" x2="1016" y2="0" width="0.1524" layer="150"/>
+<text x="15.24" y="358.14" size="12.9032" layer="97">CONNOR</text>
+<text x="523.24" y="358.14" size="12.9032" layer="97">NATHAN</text>
+<text x="1028.7" y="358.14" size="12.9032" layer="97">SARAH</text>
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="312.42" y="175.26" smashed="yes">
