@@ -646,7 +646,36 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <vertex x="-3.302" y="-1.524"/>
 </polygon>
 </package>
+<package name="SOT223" urn="urn:adsk.eagle:footprint:39019/1">
+<description>&lt;b&gt;SOT-223&lt;/b&gt;</description>
+<wire x1="3.2766" y1="1.651" x2="3.2766" y2="-1.651" width="0.2032" layer="21"/>
+<wire x1="3.2766" y1="-1.651" x2="-3.2766" y2="-1.651" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="-1.651" x2="-3.2766" y2="1.651" width="0.2032" layer="21"/>
+<wire x1="-3.2766" y1="1.651" x2="3.2766" y2="1.651" width="0.2032" layer="21"/>
+<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
+<smd name="4" x="0" y="3.099" dx="3.6" dy="2.2" layer="1"/>
+<text x="-0.8255" y="4.5085" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.0795" y="-0.1905" size="0.4064" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
+<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
+<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
+<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
+</package>
 </packages>
+<packages3d>
+<package3d name="SOT223" urn="urn:adsk.eagle:package:39069/1" type="box">
+<description>SOT-223</description>
+<packageinstances>
+<packageinstance name="SOT223"/>
+</packageinstances>
+</package3d>
+</packages3d>
 <symbols>
 <symbol name="DSPIC33FJ256MC510">
 <wire x1="-48.26" y1="-48.26" x2="48.26" y2="-48.26" width="0.4064" layer="94"/>
@@ -792,6 +821,20 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <wire x1="15.24" y1="12.7" x2="-15.24" y2="12.7" width="0.254" layer="94"/>
 <text x="-15.24" y="13.208" size="2.54" layer="95">&gt;NAME</text>
 <text x="15.24" y="13.208" size="2.54" layer="96" align="bottom-right">&gt;VALUE</text>
+</symbol>
+<symbol name="VREG">
+<pin name="VIN" x="-10.16" y="0" visible="off" length="middle"/>
+<pin name="GND" x="0" y="-10.16" visible="off" length="middle" rot="R90"/>
+<pin name="VOUT" x="10.16" y="0" visible="off" length="middle" rot="R180"/>
+<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="-5.08" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
+<text x="-5.08" y="3.048" size="1.27" layer="95">&gt;NAME</text>
+<text x="0.508" y="-5.588" size="1.27" layer="96" align="top-left">&gt;VALUE</text>
+<text x="-4.572" y="0" size="1.778" layer="97" align="center-left">IN</text>
+<text x="4.572" y="0" size="1.778" layer="97" align="center-right">OUT</text>
+<text x="0" y="-4.572" size="1.778" layer="97" align="bottom-center">GND</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -952,6 +995,26 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <connect gate="G$1" pin="TX1" pad="TX1"/>
 <connect gate="G$1" pin="TX2" pad="TX2"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="LM1117-3.3V">
+<gates>
+<gate name="G$1" symbol="VREG" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT223">
+<connects>
+<connect gate="G$1" pin="GND" pad="1"/>
+<connect gate="G$1" pin="VIN" pad="3"/>
+<connect gate="G$1" pin="VOUT" pad="2 4"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:39069/1"/>
+</package3dinstances>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -1442,6 +1505,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="-0.508" y1="-1.524" x2="0.508" y2="-1.524" width="0.254" layer="94"/>
 <text x="0" y="-1.778" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
 </symbol>
+<symbol name="DGND" urn="urn:adsk.eagle:symbol:39415/1" library_version="1">
+<description>&lt;h3&gt;Digital Ground Supply&lt;/h3&gt;</description>
+<wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
+<pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+<text x="0" y="-0.254" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="GND2" urn="urn:adsk.eagle:component:39442/1" prefix="GND" library_version="1">
@@ -1449,6 +1518,20 @@ You are welcome to use this library for commercial purposes. For attribution, we
 &lt;p&gt;Ground supply with a traditional "earth ground" symbol.&lt;/p&gt;</description>
 <gates>
 <gate name="G$1" symbol="GND" x="2.54" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="GND" urn="urn:adsk.eagle:component:39439/1" prefix="GND" library_version="1">
+<description>&lt;h3&gt;Ground Supply Symbol&lt;/h3&gt;
+&lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
+<gates>
+<gate name="1" symbol="DGND" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -3781,103 +3864,6 @@ Warning: This is the KIT version of the AXIAL-0.3 package. This package has a sm
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-IC-Power" urn="urn:adsk.eagle:library:526">
-<description>&lt;h3&gt;SparkFun Power Driver and Management ICs&lt;/h3&gt;
-In this library you'll find anything that has to do with power delivery, or making power supplies.
-&lt;p&gt;Contents:
-&lt;ul&gt;&lt;li&gt;LDOs&lt;/li&gt;
-&lt;li&gt;Boost/Buck controllers&lt;/li&gt;
-&lt;li&gt;Charge pump controllers&lt;/li&gt;
-&lt;li&gt;Power sequencers&lt;/li&gt;
-&lt;li&gt;Power switches&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
-&lt;br&gt;
-&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="SOT223" urn="urn:adsk.eagle:footprint:39019/1" library_version="1">
-<description>&lt;b&gt;SOT-223&lt;/b&gt;</description>
-<wire x1="3.2766" y1="1.651" x2="3.2766" y2="-1.651" width="0.2032" layer="21"/>
-<wire x1="3.2766" y1="-1.651" x2="-3.2766" y2="-1.651" width="0.2032" layer="21"/>
-<wire x1="-3.2766" y1="-1.651" x2="-3.2766" y2="1.651" width="0.2032" layer="21"/>
-<wire x1="-3.2766" y1="1.651" x2="3.2766" y2="1.651" width="0.2032" layer="21"/>
-<smd name="1" x="-2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="2" x="0" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="3" x="2.3114" y="-3.0988" dx="1.2192" dy="2.2352" layer="1"/>
-<smd name="4" x="0" y="3.099" dx="3.6" dy="2.2" layer="1"/>
-<text x="-0.8255" y="4.5085" size="0.4064" layer="25">&gt;NAME</text>
-<text x="-1.0795" y="-0.1905" size="0.4064" layer="27">&gt;VALUE</text>
-<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
-<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
-<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
-<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
-<rectangle x1="-1.6002" y1="1.8034" x2="1.6002" y2="3.6576" layer="51"/>
-<rectangle x1="-0.4318" y1="-3.6576" x2="0.4318" y2="-1.8034" layer="51"/>
-<rectangle x1="-2.7432" y1="-3.6576" x2="-1.8796" y2="-1.8034" layer="51"/>
-<rectangle x1="1.8796" y1="-3.6576" x2="2.7432" y2="-1.8034" layer="51"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="SOT223" urn="urn:adsk.eagle:package:39069/1" type="box" library_version="1">
-<description>SOT-223</description>
-<packageinstances>
-<packageinstance name="SOT223"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="78ADJ" urn="urn:adsk.eagle:symbol:39021/1" library_version="1">
-<wire x1="-5.08" y1="-5.08" x2="5.08" y2="-5.08" width="0.4064" layer="94"/>
-<wire x1="5.08" y1="-5.08" x2="5.08" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="5.08" y1="2.54" x2="-5.08" y2="2.54" width="0.4064" layer="94"/>
-<wire x1="-5.08" y1="2.54" x2="-5.08" y2="-5.08" width="0.4064" layer="94"/>
-<text x="2.54" y="-7.62" size="1.778" layer="95" font="vector">&gt;NAME</text>
-<text x="2.54" y="-10.16" size="1.778" layer="96" font="vector">&gt;VALUE</text>
-<text x="-2.032" y="-4.318" size="1.524" layer="95" font="vector">ADJ</text>
-<text x="-4.445" y="-0.635" size="1.524" layer="95" font="vector">IN</text>
-<text x="0.889" y="-2.667" size="1.524" layer="95" font="vector">OUT</text>
-<text x="0.889" y="-0.889" size="1.524" layer="95" font="vector">OUT</text>
-<pin name="IN" x="-7.62" y="0" visible="off" length="short" direction="in"/>
-<pin name="ADJ" x="0" y="-7.62" visible="off" length="short" direction="in" rot="R90"/>
-<pin name="OUT" x="7.62" y="0" visible="off" length="short" direction="out" rot="R180"/>
-<pin name="OUT@1" x="7.62" y="-2.54" visible="off" length="short" direction="out" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="V_REG_LM1117" urn="urn:adsk.eagle:component:39102/1" prefix="U" uservalue="yes" library_version="1">
-<description>&lt;b&gt;Voltage Regulator LM1117&lt;/b&gt;
-Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU : COM-00595</description>
-<gates>
-<gate name="G$1" symbol="78ADJ" x="0" y="0"/>
-</gates>
-<devices>
-<device name="SOT223" package="SOT223">
-<connects>
-<connect gate="G$1" pin="ADJ" pad="1"/>
-<connect gate="G$1" pin="IN" pad="3"/>
-<connect gate="G$1" pin="OUT" pad="2"/>
-<connect gate="G$1" pin="OUT@1" pad="4"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:39069/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="VREG-08170" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -3892,29 +3878,29 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <part name="U$2" library="capstone" deviceset="RT8258" device=""/>
 <part name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10NF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="10nF"/>
 <part name="GND8" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
-<part name="GND9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
 <part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1" value="switch"/>
-<part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
 <part name="D1" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="DIODE-SCHOTTKY" device="-B340A" package3d_urn="urn:adsk.eagle:package:38443/1" value="3A/40V/500mV"/>
 <part name="C2" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10NF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="10nF"/>
-<part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
 <part name="L1" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" deviceset="INDUCTOR" device="-CR75-68UH" package3d_urn="urn:adsk.eagle:package:37573/1" value="68µH/±20%/1.05A"/>
 <part name="C3" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="22UF" device="-0805-6.3V-20%" package3d_urn="urn:adsk.eagle:package:37429/1" value="22uF"/>
-<part name="GND3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
-<part name="GND4" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
 <part name="R1" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0402-1/16W-1%" package3d_urn="urn:adsk.eagle:package:39657/1" value="100K"/>
 <part name="R2" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="26.7KOHM" device="0603-1/10W-1%" package3d_urn="urn:adsk.eagle:package:39650/1" value="26.7k"/>
 <part name="U$3" library="capstone" deviceset="CSRM100" device=""/>
-<part name="U1" library="SparkFun-IC-Power" library_urn="urn:adsk.eagle:library:526" deviceset="V_REG_LM1117" device="SOT223" package3d_urn="urn:adsk.eagle:package:39069/1"/>
-<part name="GND5" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
 <part name="C4" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-1206-50V-10%" package3d_urn="urn:adsk.eagle:package:37426/1" value="10.0uF"/>
 <part name="C5" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="1.0UF" device="-1206-50V-10%" package3d_urn="urn:adsk.eagle:package:37426/1" value="10.0uF"/>
-<part name="GND" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
 <part name="C6" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.1uF"/>
 <part name="L2" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" deviceset="INDUCTOR" device="-0603-33NH" package3d_urn="urn:adsk.eagle:package:37574/1" value="33nH/±5%/500mA"/>
 <part name="L3" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" deviceset="INDUCTOR" device="-0603-33NH" package3d_urn="urn:adsk.eagle:package:37574/1" value="33nH/±5%/500mA"/>
-<part name="GND6" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
-<part name="GND7" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
+<part name="U$4" library="capstone" deviceset="LM1117-3.3V" device="" package3d_urn="urn:adsk.eagle:package:39069/1"/>
+<part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="GND3" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="GND4" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="GND5" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="GND9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="GND10" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="GND6" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="GND7" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -3949,15 +3935,9 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <instance part="GND8" gate="G$1" x="45.72" y="167.64" smashed="yes">
 <attribute name="VALUE" x="45.72" y="165.862" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="GND9" gate="G$1" x="60.96" y="167.64" smashed="yes">
-<attribute name="VALUE" x="60.96" y="165.862" size="1.778" layer="96" align="top-center"/>
-</instance>
 <instance part="J1" gate="G$1" x="40.64" y="152.4" smashed="yes">
 <attribute name="VALUE" x="38.1" y="147.574" size="1.778" layer="96" font="vector"/>
 <attribute name="NAME" x="38.1" y="157.988" size="1.778" layer="95" font="vector"/>
-</instance>
-<instance part="GND1" gate="G$1" x="55.88" y="147.32" smashed="yes">
-<attribute name="VALUE" x="55.88" y="145.542" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="D1" gate="G$1" x="106.68" y="170.18" smashed="yes" rot="R90">
 <attribute name="NAME" x="104.648" y="167.64" size="1.778" layer="95" font="vector" rot="R90"/>
@@ -3967,9 +3947,6 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <attribute name="NAME" x="95.504" y="180.721" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="92.964" y="178.181" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="GND2" gate="G$1" x="106.68" y="152.4" smashed="yes">
-<attribute name="VALUE" x="106.68" y="150.622" size="1.778" layer="96" align="top-center"/>
-</instance>
 <instance part="L1" gate="G$1" x="119.38" y="185.42" smashed="yes" rot="R90">
 <attribute name="NAME" x="118.11" y="187.96" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="119.38" y="184.15" size="1.778" layer="96" font="vector" rot="R270" align="top-left"/>
@@ -3977,12 +3954,6 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <instance part="C3" gate="G$1" x="142.24" y="177.8" smashed="yes">
 <attribute name="NAME" x="143.764" y="180.721" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="143.764" y="175.641" size="1.778" layer="96" font="vector"/>
-</instance>
-<instance part="GND3" gate="G$1" x="142.24" y="152.4" smashed="yes">
-<attribute name="VALUE" x="142.24" y="150.622" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="GND4" gate="G$1" x="129.54" y="152.4" smashed="yes">
-<attribute name="VALUE" x="129.54" y="150.622" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="R1" gate="G$1" x="129.54" y="177.8" smashed="yes" rot="R90">
 <attribute name="NAME" x="128.016" y="177.8" size="1.778" layer="95" font="vector" rot="R90" align="bottom-center"/>
@@ -3996,13 +3967,6 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <attribute name="NAME" x="58.42" y="84.328" size="2.54" layer="95"/>
 <attribute name="VALUE" x="91.44" y="84.328" size="2.54" layer="96" align="bottom-right"/>
 </instance>
-<instance part="U1" gate="G$1" x="185.42" y="185.42" smashed="yes">
-<attribute name="NAME" x="187.96" y="177.8" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="187.96" y="175.26" size="1.778" layer="96" font="vector"/>
-</instance>
-<instance part="GND5" gate="G$1" x="185.42" y="170.18" smashed="yes">
-<attribute name="VALUE" x="185.42" y="168.402" size="1.778" layer="96" align="top-center"/>
-</instance>
 <instance part="C4" gate="G$1" x="170.18" y="180.34" smashed="yes">
 <attribute name="NAME" x="171.704" y="183.261" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="171.704" y="178.181" size="1.778" layer="96" font="vector"/>
@@ -4010,9 +3974,6 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <instance part="C5" gate="G$1" x="203.2" y="180.34" smashed="yes">
 <attribute name="NAME" x="204.724" y="183.261" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="204.724" y="178.181" size="1.778" layer="96" font="vector"/>
-</instance>
-<instance part="GND" gate="G$1" x="71.12" y="40.64" smashed="yes">
-<attribute name="VALUE" x="71.12" y="38.862" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="C6" gate="G$1" x="101.6" y="116.84" smashed="yes" rot="R270">
 <attribute name="NAME" x="100.584" y="119.761" size="1.778" layer="95" font="vector"/>
@@ -4026,11 +3987,36 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <attribute name="NAME" x="120.65" y="109.22" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="120.65" y="104.14" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="GND6" gate="G$1" x="86.36" y="93.98" smashed="yes">
-<attribute name="VALUE" x="86.36" y="92.202" size="1.778" layer="96" align="top-center"/>
+<instance part="U$4" gate="G$1" x="187.96" y="185.42" smashed="yes">
+<attribute name="NAME" x="182.88" y="188.468" size="1.27" layer="95"/>
+<attribute name="VALUE" x="188.468" y="179.832" size="1.27" layer="96" align="top-left"/>
 </instance>
-<instance part="GND7" gate="G$1" x="119.38" y="93.98" smashed="yes">
-<attribute name="VALUE" x="119.38" y="92.202" size="1.778" layer="96" align="top-center"/>
+<instance part="GND1" gate="1" x="55.88" y="147.32" smashed="yes">
+<attribute name="VALUE" x="55.88" y="147.066" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND2" gate="1" x="106.68" y="152.4" smashed="yes">
+<attribute name="VALUE" x="106.68" y="152.146" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND3" gate="1" x="142.24" y="152.4" smashed="yes">
+<attribute name="VALUE" x="142.24" y="152.146" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND4" gate="1" x="60.96" y="167.64" smashed="yes">
+<attribute name="VALUE" x="60.96" y="167.386" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND5" gate="1" x="187.96" y="165.1" smashed="yes">
+<attribute name="VALUE" x="187.96" y="164.846" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND9" gate="1" x="129.54" y="152.4" smashed="yes">
+<attribute name="VALUE" x="129.54" y="152.146" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND10" gate="1" x="71.12" y="40.64" smashed="yes">
+<attribute name="VALUE" x="71.12" y="40.386" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND6" gate="1" x="86.36" y="93.98" smashed="yes">
+<attribute name="VALUE" x="86.36" y="93.726" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="GND7" gate="1" x="119.38" y="93.98" smashed="yes">
+<attribute name="VALUE" x="119.38" y="93.726" size="1.778" layer="96" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -4054,15 +4040,12 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <label x="48.26" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U1" gate="G$1" pin="OUT@1"/>
-<pinref part="U1" gate="G$1" pin="OUT"/>
-<wire x1="193.04" y1="182.88" x2="193.04" y2="185.42" width="0.1524" layer="91"/>
 <pinref part="C5" gate="G$1" pin="1"/>
-<wire x1="193.04" y1="185.42" x2="203.2" y2="185.42" width="0.1524" layer="91"/>
-<junction x="193.04" y="185.42"/>
+<wire x1="198.12" y1="185.42" x2="203.2" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="185.42" x2="210.82" y2="185.42" width="0.1524" layer="91"/>
 <junction x="203.2" y="185.42"/>
 <label x="210.82" y="185.42" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$4" gate="G$1" pin="VOUT"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -4126,52 +4109,52 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 <segment>
 <wire x1="177.8" y1="185.42" x2="170.18" y2="185.42" width="0.1524" layer="91"/>
 <label x="165.1" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="U1" gate="G$1" pin="IN"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="185.42" x2="165.1" y2="185.42" width="0.1524" layer="91"/>
 <junction x="170.18" y="185.42"/>
+<pinref part="U$4" gate="G$1" pin="VIN"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="U1" gate="G$1" pin="ADJ"/>
-<wire x1="185.42" y1="177.8" x2="185.42" y2="175.26" width="0.1524" layer="91"/>
-<pinref part="GND5" gate="G$1" pin="3.3V"/>
+<wire x1="187.96" y1="175.26" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="2"/>
-<wire x1="185.42" y1="175.26" x2="185.42" y2="172.72" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="177.8" x2="170.18" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="175.26" x2="185.42" y2="175.26" width="0.1524" layer="91"/>
-<junction x="185.42" y="175.26"/>
+<wire x1="187.96" y1="170.18" x2="187.96" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="177.8" x2="170.18" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="170.18" y1="170.18" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
+<junction x="187.96" y="170.18"/>
 <pinref part="C5" gate="G$1" pin="2"/>
-<wire x1="203.2" y1="177.8" x2="203.2" y2="175.26" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="175.26" x2="185.42" y2="175.26" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="177.8" x2="203.2" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="203.2" y1="170.18" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
+<pinref part="U$4" gate="G$1" pin="GND"/>
+<pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
-<pinref part="GND4" gate="G$1" pin="3.3V"/>
 <wire x1="129.54" y1="157.48" x2="129.54" y2="154.94" width="0.1524" layer="91"/>
+<pinref part="GND9" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
-<pinref part="GND1" gate="G$1" pin="3.3V"/>
 <wire x1="55.88" y1="149.86" x2="55.88" y2="152.4" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="152.4" x2="48.26" y2="152.4" width="0.1524" layer="91"/>
+<pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U$2" gate="G$1" pin="GND"/>
-<pinref part="GND9" gate="G$1" pin="3.3V"/>
 <wire x1="60.96" y1="170.18" x2="60.96" y2="175.26" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="175.26" x2="63.5" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C3" gate="G$1" pin="2"/>
-<pinref part="GND3" gate="G$1" pin="3.3V"/>
 <wire x1="142.24" y1="154.94" x2="142.24" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="GND3" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U$3" gate="G$1" pin="GND"/>
 <wire x1="71.12" y1="50.8" x2="71.12" y2="43.18" width="0.1524" layer="91"/>
-<pinref part="GND" gate="G$1" pin="3.3V"/>
+<pinref part="GND10" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
@@ -4180,18 +4163,18 @@ Standard adjustable voltage regulator but in SMD form. Spark Fun Electronics SKU
 </segment>
 <segment>
 <pinref part="D1" gate="G$1" pin="A"/>
-<pinref part="GND2" gate="G$1" pin="3.3V"/>
 <wire x1="106.68" y1="154.94" x2="106.68" y2="167.64" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="L2" gate="G$1" pin="2"/>
 <wire x1="86.36" y1="101.6" x2="86.36" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="GND6" gate="G$1" pin="3.3V"/>
+<pinref part="GND6" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="L3" gate="G$1" pin="2"/>
 <wire x1="119.38" y1="101.6" x2="119.38" y2="96.52" width="0.1524" layer="91"/>
-<pinref part="GND7" gate="G$1" pin="3.3V"/>
+<pinref part="GND7" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="N$1" class="0">
