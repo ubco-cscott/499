@@ -1,0 +1,3 @@
+- Wire up new microcontroller
+- add sd card solt
+- add jumpers for disconnecting and connecting the microcontroller.
