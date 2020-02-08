@@ -6810,6 +6810,7 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <part name="GND18" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="TP1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:38285/1"/>
 <part name="TP2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:38285/1"/>
+<part name="C14" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF" device="-1206-6.3V-20%" package3d_urn="urn:adsk.eagle:package:37426/1" value="10uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -7076,6 +7077,10 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <attribute name="NAME" x="307.34" y="180.34" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="307.34" y="175.26" size="1.778" layer="96" font="vector"/>
 </instance>
+<instance part="C14" gate="G$1" x="233.68" y="154.94" smashed="yes">
+<attribute name="NAME" x="235.204" y="157.861" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="235.204" y="152.781" size="1.778" layer="96" font="vector"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7137,6 +7142,15 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="416.56" y1="73.66" x2="416.56" y2="78.74" width="0.1524" layer="91"/>
 <wire x1="416.56" y1="78.74" x2="414.02" y2="78.74" width="0.1524" layer="91"/>
 <label x="414.02" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="1" pin="VCCIO"/>
+<wire x1="261.62" y1="185.42" x2="233.68" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="185.42" x2="233.68" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="1" pin="3V3OUT"/>
+<wire x1="233.68" y1="160.02" x2="261.62" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="C14" gate="G$1" pin="1"/>
+<junction x="233.68" y="160.02"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -7347,6 +7361,10 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="261.62" y1="147.32" x2="261.62" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="261.62" y1="134.62" x2="289.56" y2="134.62" width="0.1524" layer="91"/>
 <junction x="289.56" y="134.62"/>
+<pinref part="C14" gate="G$1" pin="2"/>
+<wire x1="233.68" y1="152.4" x2="233.68" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="134.62" x2="261.62" y2="134.62" width="0.1524" layer="91"/>
+<junction x="261.62" y="134.62"/>
 </segment>
 </net>
 <net name="CSRM_EN" class="0">
@@ -7728,6 +7746,11 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="198.12" y1="45.72" x2="200.66" y2="45.72" width="0.1524" layer="91"/>
 <label x="200.66" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R10" gate="G$1" pin="1"/>
+<wire x1="243.84" y1="180.34" x2="238.76" y2="180.34" width="0.1524" layer="91"/>
+<label x="238.76" y="180.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="CSRM_RESET" class="0">
 <segment>
@@ -7745,23 +7768,11 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="254" y1="180.34" x2="261.62" y2="180.34" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="R10" gate="G$1" pin="1"/>
-<wire x1="243.84" y1="180.34" x2="238.76" y2="180.34" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="USB_VCC" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="VCC"/>
 <wire x1="261.62" y1="187.96" x2="238.76" y2="187.96" width="0.1524" layer="91"/>
 <label x="238.76" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="N$12" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="VCCIO"/>
-<wire x1="261.62" y1="185.42" x2="238.76" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$13" class="0">
