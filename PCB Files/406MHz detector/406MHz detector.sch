@@ -267,6 +267,18 @@
 <text x="0" y="1.651" size="0.6096" layer="25" font="vector" ratio="20" align="bottom-center">&gt;NAME</text>
 <text x="0" y="-1.651" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 </package>
+<package name="USB">
+<pad name="S1" x="0" y="0" drill="2.3"/>
+<pad name="S2" x="12.04" y="0" drill="2.3"/>
+<pad name="3" x="4.77" y="2.71" drill="0.6"/>
+<pad name="1" x="7.27" y="4.71" drill="0.6" rot="R180"/>
+<pad name="2" x="4.77" y="4.71" drill="0.6"/>
+<pad name="4" x="7.27" y="2.71" drill="0.6" rot="R180"/>
+<wire x1="-0.03" y1="6.2" x2="-0.03" y2="-10.3" width="0.127" layer="21"/>
+<wire x1="-0.03" y1="6.2" x2="12.07" y2="6.2" width="0.127" layer="21"/>
+<wire x1="12.07" y1="6.2" x2="12.07" y2="-10.3" width="0.127" layer="21"/>
+<wire x1="-0.03" y1="-10.3" x2="12.07" y2="-10.3" width="0.127" layer="21"/>
+</package>
 </packages>
 <packages3d>
 <package3d name="SOT223" urn="urn:adsk.eagle:package:39069/1" type="box">
@@ -343,6 +355,22 @@
 <vertex x="1.27" y="0"/>
 <vertex x="-1.27" y="-1.27"/>
 </polygon>
+</symbol>
+<symbol name="USB-B">
+<description>&lt;h3&gt;USB A/B - with Shield Pins&lt;/h3&gt;
+&lt;p&gt;USB connector for type-A and type-B connectors. Includes shield pins broken out. &lt;/p&gt;</description>
+<wire x1="2.54" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="2.54" y1="7.62" x2="2.54" y2="-5.08" width="0.254" layer="94"/>
+<text x="-1.27" y="-2.54" size="2.54" layer="94" rot="R90">USB</text>
+<text x="-5.08" y="7.874" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="-5.08" y="-5.334" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
+<pin name="D+" x="-7.62" y="0" visible="pad" length="short"/>
+<pin name="D-" x="-7.62" y="2.54" visible="pad" length="short"/>
+<pin name="VBUS" x="-7.62" y="5.08" visible="pad" length="short" direction="pwr"/>
+<pin name="GND" x="-7.62" y="-2.54" visible="pad" length="short" direction="pwr"/>
+<pin name="SHIELD" x="5.08" y="2.54" visible="pad" length="short" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -424,6 +452,25 @@
 <connects>
 <connect gate="G$1" pin="A" pad="A"/>
 <connect gate="G$1" pin="C" pad="C"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="USB-B">
+<gates>
+<gate name="G$1" symbol="USB-B" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="USB">
+<connects>
+<connect gate="G$1" pin="D+" pad="3"/>
+<connect gate="G$1" pin="D-" pad="2"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SHIELD" pad="S1 S2"/>
+<connect gate="G$1" pin="VBUS" pad="1"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -1096,6 +1143,30 @@ CAP-08070</description>
 <technology name="">
 <attribute name="PROD_ID" value="CAP-09824"/>
 <attribute name="VALUE" value="10uF"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="0.18UF" urn="urn:adsk.eagle:component:37459/1" prefix="C" library_version="1">
+<description>&lt;h3&gt;0.18µF ceramic capacitor&lt;/h3&gt;
+&lt;p&gt;A capacitor is a passive two-terminal electrical component used to store electrical energy temporarily in an electric field.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="CAP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="-0603-10V-10%" package="0603">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:37414/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CAP-12380"/>
+<attribute name="VALUE" value="0.18uF"/>
 </technology>
 </technologies>
 </device>
@@ -6811,6 +6882,13 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <part name="TP1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:38285/1"/>
 <part name="TP2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:38285/1"/>
 <part name="C14" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10UF" device="-1206-6.3V-20%" package3d_urn="urn:adsk.eagle:package:37426/1" value="10uF"/>
+<part name="C15" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.18UF" device="-0603-10V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.18uF"/>
+<part name="GND19" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="C16" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.18UF" device="-0603-10V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.18uF"/>
+<part name="GND20" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="C17" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.18UF" device="-0603-10V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.18uF"/>
+<part name="GND21" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="U$1" library="capstone" deviceset="USB-B" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7081,6 +7159,31 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <attribute name="NAME" x="235.204" y="157.861" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="235.204" y="152.781" size="1.778" layer="96" font="vector"/>
 </instance>
+<instance part="C15" gate="G$1" x="243.84" y="86.36" smashed="yes">
+<attribute name="NAME" x="245.364" y="89.281" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="245.364" y="84.201" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="GND19" gate="1" x="243.84" y="81.28" smashed="yes">
+<attribute name="VALUE" x="243.84" y="81.026" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="C16" gate="G$1" x="246.38" y="198.12" smashed="yes">
+<attribute name="NAME" x="247.904" y="201.041" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="247.904" y="195.961" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="GND20" gate="1" x="246.38" y="190.5" smashed="yes">
+<attribute name="VALUE" x="246.38" y="190.246" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="C17" gate="G$1" x="109.22" y="86.36" smashed="yes">
+<attribute name="NAME" x="110.744" y="89.281" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="110.744" y="84.201" size="1.778" layer="96" font="vector"/>
+</instance>
+<instance part="GND21" gate="1" x="109.22" y="78.74" smashed="yes">
+<attribute name="VALUE" x="109.22" y="78.486" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="U$1" gate="G$1" x="119.38" y="297.18" smashed="yes">
+<attribute name="NAME" x="114.3" y="305.054" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="114.3" y="291.846" size="1.778" layer="96" font="vector" align="top-left"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -7108,8 +7211,13 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <net name="3.3V" class="0">
 <segment>
 <pinref part="U$3" gate="G$1" pin="3.3V+"/>
-<wire x1="116.84" y1="78.74" x2="111.76" y2="78.74" width="0.1524" layer="91"/>
-<label x="111.76" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="116.84" y1="78.74" x2="116.84" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="116.84" y1="93.98" x2="109.22" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="91.44" x2="109.22" y2="93.98" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="93.98" x2="106.68" y2="93.98" width="0.1524" layer="91"/>
+<label x="106.68" y="93.98" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="C17" gate="G$1" pin="1"/>
+<junction x="109.22" y="93.98"/>
 </segment>
 <segment>
 <pinref part="C5" gate="G$1" pin="1"/>
@@ -7126,11 +7234,14 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <pinref part="U2" gate="U$1" pin="VCC@6"/>
 <wire x1="251.46" y1="91.44" x2="251.46" y2="88.9" width="0.1524" layer="91"/>
 <junction x="251.46" y="91.44"/>
-<wire x1="251.46" y1="91.44" x2="241.3" y2="91.44" width="0.1524" layer="91"/>
+<wire x1="251.46" y1="91.44" x2="243.84" y2="91.44" width="0.1524" layer="91"/>
 <label x="241.3" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="U2" gate="U$1" pin="AREF"/>
+<wire x1="243.84" y1="91.44" x2="241.3" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="251.46" y1="83.82" x2="251.46" y2="88.9" width="0.1524" layer="91"/>
 <junction x="251.46" y="88.9"/>
+<pinref part="C15" gate="G$1" pin="1"/>
+<junction x="243.84" y="91.44"/>
 </segment>
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
@@ -7366,6 +7477,20 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="233.68" y1="134.62" x2="261.62" y2="134.62" width="0.1524" layer="91"/>
 <junction x="261.62" y="134.62"/>
 </segment>
+<segment>
+<pinref part="C15" gate="G$1" pin="2"/>
+<pinref part="GND19" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="C16" gate="G$1" pin="2"/>
+<pinref part="GND20" gate="1" pin="GND"/>
+<wire x1="246.38" y1="195.58" x2="246.38" y2="193.04" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="C17" gate="G$1" pin="2"/>
+<pinref part="GND21" gate="1" pin="GND"/>
+<wire x1="109.22" y1="83.82" x2="109.22" y2="81.28" width="0.1524" layer="91"/>
+</segment>
 </net>
 <net name="CSRM_EN" class="0">
 <segment>
@@ -7472,7 +7597,7 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <label x="162.56" y="58.42" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="ANTENNA" class="0">
+<net name="ANTENNA_CONNECTOR" class="0">
 <segment>
 <pinref part="C6" gate="G$1" pin="1"/>
 <wire x1="170.18" y1="116.84" x2="182.88" y2="116.84" width="0.1524" layer="91"/>
@@ -7771,8 +7896,13 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <net name="USB_VCC" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="VCC"/>
-<wire x1="261.62" y1="187.96" x2="238.76" y2="187.96" width="0.1524" layer="91"/>
-<label x="238.76" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="261.62" y1="187.96" x2="256.54" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="187.96" x2="256.54" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="256.54" y1="203.2" x2="246.38" y2="203.2" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="203.2" x2="238.76" y2="203.2" width="0.1524" layer="91"/>
+<label x="238.76" y="203.2" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="C16" gate="G$1" pin="1"/>
+<junction x="246.38" y="203.2"/>
 </segment>
 </net>
 <net name="USB_DP" class="0">

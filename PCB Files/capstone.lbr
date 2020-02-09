@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.5.2">
+<eagle version="9.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -701,8 +701,6 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <wire x1="12.07" y1="6.2" x2="12.07" y2="-10.3" width="0.127" layer="21"/>
 <wire x1="-0.03" y1="-10.3" x2="12.07" y2="-10.3" width="0.127" layer="21"/>
 </package>
-<package name="USB-B">
-</package>
 </packages>
 <packages3d>
 <package3d name="SOT223" urn="urn:adsk.eagle:package:39069/1" type="box">
@@ -896,16 +894,6 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <wire x1="-7.62" y1="2.54" x2="-7.62" y2="-2.54" width="0.254" layer="94"/>
 <pin name="X1" x="-12.7" y="0" length="middle"/>
 <pin name="X2" x="12.7" y="0" length="middle" rot="R180"/>
-</symbol>
-<symbol name="USB">
-<wire x1="-5.08" y1="2.54" x2="2.54" y2="2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="2.54" x2="2.54" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="-5.08" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="2.54" width="0.254" layer="94"/>
-<pin name="2" x="-2.54" y="7.62" length="middle" rot="R270"/>
-<pin name="1" x="0" y="7.62" length="middle" rot="R270"/>
-<pin name="3" x="-2.54" y="-7.62" length="middle" rot="R90"/>
-<pin name="4" x="0" y="-7.62" length="middle" rot="R90"/>
 </symbol>
 <symbol name="USB-B">
 <description>&lt;h3&gt;USB A/B - with Shield Pins&lt;/h3&gt;
