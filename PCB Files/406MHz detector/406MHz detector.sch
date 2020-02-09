@@ -7775,16 +7775,18 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <label x="238.76" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$13" class="0">
+<net name="USB_DP" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="USBDP"/>
 <wire x1="261.62" y1="154.94" x2="256.54" y2="154.94" width="0.1524" layer="91"/>
+<label x="256.54" y="154.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$14" class="0">
+<net name="USB_DM" class="0">
 <segment>
 <pinref part="IC1" gate="1" pin="USBDM"/>
 <wire x1="261.62" y1="152.4" x2="256.54" y2="152.4" width="0.1524" layer="91"/>
+<label x="256.54" y="152.4" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
