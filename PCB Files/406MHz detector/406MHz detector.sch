@@ -741,6 +741,7 @@
 </devices>
 </deviceset>
 <deviceset name="FERRITE_BEAD" prefix="FB" uservalue="yes">
+<description>HZ0603B112R-10</description>
 <gates>
 <gate name="G$1" symbol="FERRITE" x="0" y="0"/>
 </gates>
