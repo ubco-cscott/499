@@ -1469,14 +1469,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <packages>
 </packages>
 <symbols>
-<symbol name="GND" urn="urn:adsk.eagle:symbol:39417/1" library_version="1">
-<description>&lt;h3&gt;Ground Supply (Earth Ground Symbol)&lt;/h3&gt;</description>
-<pin name="3.3V" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
-<wire x1="-2.032" y1="0" x2="2.032" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="-0.762" x2="1.27" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="-0.508" y1="-1.524" x2="0.508" y2="-1.524" width="0.254" layer="94"/>
-<text x="0" y="-1.778" size="1.778" layer="96" align="top-center">&gt;VALUE</text>
-</symbol>
 <symbol name="DGND" urn="urn:adsk.eagle:symbol:39415/1" library_version="1">
 <description>&lt;h3&gt;Digital Ground Supply&lt;/h3&gt;</description>
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
@@ -1492,20 +1484,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GND2" urn="urn:adsk.eagle:component:39442/1" prefix="GND" library_version="1">
-<description>&lt;h3&gt;Ground Supply (Earth Ground style)&lt;/h3&gt;
-&lt;p&gt;Ground supply with a traditional "earth ground" symbol.&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="GND" x="2.54" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="GND" urn="urn:adsk.eagle:component:39439/1" prefix="GND" library_version="1">
 <description>&lt;h3&gt;Ground Supply Symbol&lt;/h3&gt;
 &lt;p&gt;Generic signal ground supply symbol.&lt;/p&gt;</description>
@@ -7008,13 +6986,12 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <clearance class="0" value="0.2032"/>
 </class>
 <class number="1" name="RF" width="1.4986" drill="0">
-<clearance class="1" value="1.524"/>
+<clearance class="1" value="0.0508"/>
 </class>
 </classes>
 <parts>
 <part name="U1" library="capstone" deviceset="RT8258" device=""/>
 <part name="C1" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10NF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="10nF"/>
-<part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND2" device="" value="GND"/>
 <part name="J2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1" value="power switch"/>
 <part name="D2" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="DIODE-SCHOTTKY" device="-B340A" package3d_urn="urn:adsk.eagle:package:38443/1" value="3A/40V/500mV"/>
 <part name="C6" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="10NF" device="-0603-50V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="10nF"/>
@@ -7071,12 +7048,11 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <part name="JP2" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_SILK_ROUND" package3d_urn="urn:adsk.eagle:package:39280/1"/>
 <part name="JP3" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_2_NO" device="_SILK_ROUND" package3d_urn="urn:adsk.eagle:package:39280/1"/>
 <part name="R4" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0402-1/16W-1%" package3d_urn="urn:adsk.eagle:package:39657/1" value="100"/>
-<part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1"/>
+<part name="J3" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="CONN_02" device="" package3d_urn="urn:adsk.eagle:package:38039/1" value="eject sd card"/>
 <part name="GND5" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="JP5" library="SparkFun-Jumpers" library_urn="urn:adsk.eagle:library:528" deviceset="JUMPER-SMT_3_2-NC_TRACE" device="_SILK" package3d_urn="urn:adsk.eagle:package:39289/1"/>
 <part name="C11" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="2.2UF" device="-0805-25V-(+80/-20%)" package3d_urn="urn:adsk.eagle:package:37429/1" value="0.1uF"/>
 <part name="IC1" library="ftdichip" library_urn="urn:adsk.eagle:library:231" deviceset="FT232R" device="L" package3d_urn="urn:adsk.eagle:package:14013/1"/>
-<part name="R10" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0402-1/16W-1%" package3d_urn="urn:adsk.eagle:package:39657/1" value="100K"/>
 <part name="GND21" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="TP1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:38285/1"/>
 <part name="TP2" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="TEST-POINT" device="3X5" package3d_urn="urn:adsk.eagle:package:38285/1"/>
@@ -7092,7 +7068,7 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <part name="GND23" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="C19" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.18UF" device="-0603-10V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.1uF"/>
 <part name="GND22" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0402-1/16W-1%" package3d_urn="urn:adsk.eagle:package:39657/1" value="100K"/>
+<part name="R11" library="SparkFun-Resistors" library_urn="urn:adsk.eagle:library:532" deviceset="100KOHM" device="-0402-1/16W-1%" package3d_urn="urn:adsk.eagle:package:39657/1" value="10K"/>
 <part name="J6" library="capstone" deviceset="A32270-ND" device=""/>
 <part name="C22" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.1UF" device="-0603-25V-5%" package3d_urn="urn:adsk.eagle:package:37414/1" value="TBD"/>
 <part name="L7" library="SparkFun-Coils" library_urn="urn:adsk.eagle:library:512" deviceset="INDUCTOR" device="-0603-33NH" package3d_urn="urn:adsk.eagle:package:37574/1" value="TBD"/>
@@ -7115,14 +7091,12 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <part name="FB3" library="capstone" deviceset="FERRITE_BEAD" device=""/>
 <part name="FB4" library="capstone" deviceset="FERRITE_BEAD" device=""/>
 <part name="FB5" library="capstone" deviceset="FERRITE_BEAD" device=""/>
+<part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
+<part name="C23" library="SparkFun-Capacitors" library_urn="urn:adsk.eagle:library:510" deviceset="0.18UF" device="-0603-10V-10%" package3d_urn="urn:adsk.eagle:package:37414/1" value="0.1uF"/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<wire x1="0" y1="0" x2="0" y2="381" width="0.1524" layer="150"/>
-<wire x1="0" y1="381" x2="508" y2="381" width="0.1524" layer="150"/>
-<wire x1="508" y1="381" x2="508" y2="0" width="0.1524" layer="150"/>
-<wire x1="508" y1="0" x2="0" y2="0" width="0.1524" layer="150"/>
 </plain>
 <instances>
 <instance part="U1" gate="G$1" x="76.2" y="180.34" smashed="yes">
@@ -7132,9 +7106,6 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <instance part="C1" gate="G$1" x="45.72" y="177.8" smashed="yes">
 <attribute name="NAME" x="47.244" y="180.721" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="47.244" y="175.641" size="1.778" layer="96" font="vector"/>
-</instance>
-<instance part="GND2" gate="G$1" x="45.72" y="167.64" smashed="yes">
-<attribute name="VALUE" x="45.72" y="165.862" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="J2" gate="G$1" x="40.64" y="144.78" smashed="yes">
 <attribute name="VALUE" x="38.1" y="139.954" size="1.778" layer="96" font="vector"/>
@@ -7168,13 +7139,13 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <attribute name="NAME" x="121.92" y="84.328" size="2.54" layer="95"/>
 <attribute name="VALUE" x="154.94" y="84.328" size="2.54" layer="96" align="bottom-right"/>
 </instance>
-<instance part="C10" gate="G$1" x="170.18" y="180.34" smashed="yes">
-<attribute name="NAME" x="171.704" y="183.261" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="171.704" y="178.181" size="1.778" layer="96" font="vector"/>
+<instance part="C10" gate="G$1" x="165.1" y="180.34" smashed="yes">
+<attribute name="NAME" x="166.624" y="183.261" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="166.624" y="178.181" size="1.778" layer="96" font="vector"/>
 </instance>
-<instance part="C12" gate="G$1" x="203.2" y="180.34" smashed="yes">
-<attribute name="NAME" x="204.724" y="183.261" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="204.724" y="178.181" size="1.778" layer="96" font="vector"/>
+<instance part="C12" gate="G$1" x="198.12" y="180.34" smashed="yes">
+<attribute name="NAME" x="199.644" y="183.261" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="199.644" y="178.181" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="C9" gate="G$1" x="165.1" y="116.84" smashed="yes" rot="R270">
 <attribute name="NAME" x="164.084" y="119.761" size="1.778" layer="95" font="vector"/>
@@ -7188,9 +7159,9 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <attribute name="NAME" x="184.15" y="109.22" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="184.15" y="104.14" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="U3" gate="G$1" x="187.96" y="185.42" smashed="yes">
-<attribute name="NAME" x="182.88" y="188.468" size="1.27" layer="95"/>
-<attribute name="VALUE" x="188.468" y="179.832" size="1.27" layer="96" align="top-left"/>
+<instance part="U3" gate="G$1" x="182.88" y="185.42" smashed="yes">
+<attribute name="NAME" x="177.8" y="188.468" size="1.27" layer="95"/>
+<attribute name="VALUE" x="183.388" y="179.832" size="1.27" layer="96" align="top-left"/>
 </instance>
 <instance part="GND3" gate="1" x="55.88" y="137.16" smashed="yes">
 <attribute name="VALUE" x="55.88" y="136.906" size="1.778" layer="96" align="top-center"/>
@@ -7204,8 +7175,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <instance part="GND4" gate="1" x="60.96" y="167.64" smashed="yes">
 <attribute name="VALUE" x="60.96" y="167.386" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="GND15" gate="1" x="187.96" y="165.1" smashed="yes">
-<attribute name="VALUE" x="187.96" y="164.846" size="1.778" layer="96" align="top-center"/>
+<instance part="GND15" gate="1" x="182.88" y="165.1" smashed="yes">
+<attribute name="VALUE" x="182.88" y="164.846" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="GND10" gate="1" x="129.54" y="152.4" smashed="yes">
 <attribute name="VALUE" x="129.54" y="152.146" size="1.778" layer="96" align="top-center"/>
@@ -7254,12 +7225,12 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <instance part="GND6" gate="1" x="88.9" y="218.44" smashed="yes">
 <attribute name="VALUE" x="88.9" y="218.186" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="J1" gate="G$1" x="20.32" y="297.18" smashed="yes">
-<attribute name="VALUE" x="17.78" y="292.354" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="17.78" y="302.768" size="1.778" layer="95" font="vector"/>
+<instance part="J1" gate="G$1" x="127" y="231.14" smashed="yes">
+<attribute name="VALUE" x="124.46" y="226.314" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="124.46" y="236.728" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="GND1" gate="1" x="30.48" y="287.02" smashed="yes">
-<attribute name="VALUE" x="30.48" y="286.766" size="1.778" layer="96" align="top-center"/>
+<instance part="GND1" gate="1" x="137.16" y="220.98" smashed="yes">
+<attribute name="VALUE" x="137.16" y="220.726" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="U4" gate="U$1" x="276.86" y="68.58" smashed="yes">
 <attribute name="NAME" x="256.54" y="102.362" size="1.778" layer="95"/>
@@ -7341,12 +7312,12 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <attribute name="NAME" x="83.82" y="110.744" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="83.82" y="107.696" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
-<instance part="J3" gate="G$1" x="66.04" y="297.18" smashed="yes">
-<attribute name="VALUE" x="63.5" y="292.354" size="1.778" layer="96" font="vector"/>
-<attribute name="NAME" x="63.5" y="302.768" size="1.778" layer="95" font="vector"/>
+<instance part="J3" gate="G$1" x="172.72" y="231.14" smashed="yes">
+<attribute name="VALUE" x="170.18" y="226.314" size="1.778" layer="96" font="vector"/>
+<attribute name="NAME" x="170.18" y="236.728" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="GND5" gate="1" x="76.2" y="287.02" smashed="yes">
-<attribute name="VALUE" x="76.2" y="286.766" size="1.778" layer="96" align="top-center"/>
+<instance part="GND5" gate="1" x="182.88" y="220.98" smashed="yes">
+<attribute name="VALUE" x="182.88" y="220.726" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="JP5" gate="G$1" x="193.04" y="45.72" smashed="yes" rot="R90">
 <attribute name="NAME" x="190.5" y="48.641" size="1.778" layer="95" font="vector"/>
@@ -7358,10 +7329,6 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <instance part="IC1" gate="1" x="274.32" y="165.1" smashed="yes">
 <attribute name="NAME" x="264.16" y="191.77" size="1.778" layer="95"/>
 <attribute name="VALUE" x="264.16" y="134.62" size="1.778" layer="96"/>
-</instance>
-<instance part="R10" gate="G$1" x="248.92" y="180.34" smashed="yes">
-<attribute name="NAME" x="248.92" y="181.864" size="1.778" layer="95" font="vector" align="bottom-center"/>
-<attribute name="VALUE" x="248.92" y="178.816" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="GND21" gate="1" x="289.56" y="129.54" smashed="yes">
 <attribute name="VALUE" x="289.56" y="129.286" size="1.778" layer="96" align="top-center"/>
@@ -7399,9 +7366,9 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <instance part="GND8" gate="1" x="109.22" y="78.74" smashed="yes">
 <attribute name="VALUE" x="109.22" y="78.486" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="J4" gate="G$1" x="134.62" y="297.18" smashed="yes">
-<attribute name="NAME" x="129.54" y="305.054" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="129.54" y="291.846" size="1.778" layer="96" font="vector" align="top-left"/>
+<instance part="J4" gate="G$1" x="241.3" y="231.14" smashed="yes">
+<attribute name="NAME" x="236.22" y="239.014" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="236.22" y="225.806" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
 <instance part="U5" gate="G$1" x="411.48" y="157.48" smashed="yes">
 <attribute name="NAME" x="398.78" y="175.768" size="1.27" layer="95"/>
@@ -7450,8 +7417,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <instance part="GND25" gate="1" x="426.72" y="45.72" smashed="yes">
 <attribute name="VALUE" x="426.72" y="45.466" size="1.778" layer="96" align="top-center"/>
 </instance>
-<instance part="GND9" gate="1" x="119.38" y="287.02" smashed="yes">
-<attribute name="VALUE" x="119.38" y="286.766" size="1.778" layer="96" align="top-center"/>
+<instance part="GND9" gate="1" x="226.06" y="220.98" smashed="yes">
+<attribute name="VALUE" x="226.06" y="220.726" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="C20" gate="G$1" x="406.4" y="58.42" smashed="yes" rot="MR0">
 <attribute name="NAME" x="404.876" y="61.341" size="1.778" layer="95" font="vector" rot="MR0"/>
@@ -7485,9 +7452,9 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <attribute name="NAME" x="78.232" y="122.428" size="1.27" layer="95"/>
 <attribute name="VALUE" x="78.232" y="116.332" size="1.27" layer="96" align="top-left"/>
 </instance>
-<instance part="C13" gate="G$1" x="213.36" y="180.34" smashed="yes">
-<attribute name="NAME" x="214.884" y="183.261" size="1.778" layer="95" font="vector"/>
-<attribute name="VALUE" x="214.884" y="178.181" size="1.778" layer="96" font="vector"/>
+<instance part="C13" gate="G$1" x="208.28" y="180.34" smashed="yes">
+<attribute name="NAME" x="209.804" y="183.261" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="209.804" y="178.181" size="1.778" layer="96" font="vector"/>
 </instance>
 <instance part="FB3" gate="G$1" x="236.22" y="203.2" smashed="yes" rot="R180">
 <attribute name="NAME" x="233.172" y="206.248" size="1.27" layer="95"/>
@@ -7497,9 +7464,16 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <attribute name="NAME" x="355.092" y="185.928" size="1.27" layer="95"/>
 <attribute name="VALUE" x="355.092" y="179.832" size="1.27" layer="96" align="top-left"/>
 </instance>
-<instance part="FB5" gate="G$1" x="393.7" y="63.5" smashed="yes">
-<attribute name="NAME" x="390.652" y="66.548" size="1.27" layer="95"/>
-<attribute name="VALUE" x="390.652" y="60.452" size="1.27" layer="96" align="top-left"/>
+<instance part="FB5" gate="G$1" x="396.24" y="63.5" smashed="yes">
+<attribute name="NAME" x="393.192" y="66.548" size="1.27" layer="95"/>
+<attribute name="VALUE" x="393.192" y="60.452" size="1.27" layer="96" align="top-left"/>
+</instance>
+<instance part="GND2" gate="1" x="45.72" y="167.64" smashed="yes">
+<attribute name="VALUE" x="45.72" y="167.386" size="1.778" layer="96" align="top-center"/>
+</instance>
+<instance part="C23" gate="G$1" x="307.34" y="162.56" smashed="yes" rot="R90">
+<attribute name="NAME" x="303.784" y="165.481" size="1.778" layer="95" font="vector"/>
+<attribute name="VALUE" x="303.784" y="157.861" size="1.778" layer="96" font="vector"/>
 </instance>
 </instances>
 <busses>
@@ -7528,14 +7502,14 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <net name="3.3V" class="0">
 <segment>
 <pinref part="C12" gate="G$1" pin="1"/>
-<wire x1="198.12" y1="185.42" x2="203.2" y2="185.42" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="185.42" x2="213.36" y2="185.42" width="0.1524" layer="91"/>
-<junction x="203.2" y="185.42"/>
-<label x="223.52" y="185.42" size="1.27" layer="95" xref="yes"/>
+<wire x1="193.04" y1="185.42" x2="198.12" y2="185.42" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="185.42" x2="208.28" y2="185.42" width="0.1524" layer="91"/>
+<junction x="198.12" y="185.42"/>
+<label x="218.44" y="185.42" size="1.27" layer="95" xref="yes"/>
 <pinref part="U3" gate="G$1" pin="VOUT"/>
 <pinref part="C13" gate="G$1" pin="1"/>
-<wire x1="213.36" y1="185.42" x2="223.52" y2="185.42" width="0.1524" layer="91"/>
-<junction x="213.36" y="185.42"/>
+<wire x1="208.28" y1="185.42" x2="218.44" y2="185.42" width="0.1524" layer="91"/>
+<junction x="208.28" y="185.42"/>
 </segment>
 <segment>
 <pinref part="R9" gate="G$1" pin="2"/>
@@ -7564,8 +7538,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </segment>
 <segment>
 <pinref part="FB5" gate="G$1" pin="P$1"/>
-<wire x1="388.62" y1="63.5" x2="386.08" y2="63.5" width="0.1524" layer="91"/>
-<label x="386.08" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="391.16" y1="63.5" x2="388.62" y2="63.5" width="0.1524" layer="91"/>
+<label x="388.62" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -7630,31 +7604,31 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="142.24" y1="185.42" x2="129.54" y2="185.42" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<wire x1="177.8" y1="185.42" x2="170.18" y2="185.42" width="0.1524" layer="91"/>
-<label x="165.1" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="172.72" y1="185.42" x2="165.1" y2="185.42" width="0.1524" layer="91"/>
+<label x="160.02" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="C10" gate="G$1" pin="1"/>
-<wire x1="170.18" y1="185.42" x2="165.1" y2="185.42" width="0.1524" layer="91"/>
-<junction x="170.18" y="185.42"/>
+<wire x1="165.1" y1="185.42" x2="160.02" y2="185.42" width="0.1524" layer="91"/>
+<junction x="165.1" y="185.42"/>
 <pinref part="U3" gate="G$1" pin="VIN"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
-<wire x1="187.96" y1="175.26" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="175.26" x2="182.88" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="C10" gate="G$1" pin="2"/>
-<wire x1="187.96" y1="170.18" x2="187.96" y2="167.64" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="177.8" x2="170.18" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="170.18" y1="170.18" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
-<junction x="187.96" y="170.18"/>
+<wire x1="182.88" y1="170.18" x2="182.88" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="177.8" x2="165.1" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="170.18" x2="182.88" y2="170.18" width="0.1524" layer="91"/>
+<junction x="182.88" y="170.18"/>
 <pinref part="C12" gate="G$1" pin="2"/>
-<wire x1="203.2" y1="177.8" x2="203.2" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="203.2" y1="170.18" x2="187.96" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="177.8" x2="198.12" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="198.12" y1="170.18" x2="182.88" y2="170.18" width="0.1524" layer="91"/>
 <pinref part="U3" gate="G$1" pin="GND"/>
 <pinref part="GND15" gate="1" pin="GND"/>
 <pinref part="C13" gate="G$1" pin="2"/>
-<wire x1="213.36" y1="177.8" x2="213.36" y2="170.18" width="0.1524" layer="91"/>
-<wire x1="213.36" y1="170.18" x2="203.2" y2="170.18" width="0.1524" layer="91"/>
-<junction x="203.2" y="170.18"/>
+<wire x1="208.28" y1="177.8" x2="208.28" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="170.18" x2="198.12" y2="170.18" width="0.1524" layer="91"/>
+<junction x="198.12" y="170.18"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
@@ -7687,8 +7661,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="2"/>
-<pinref part="GND2" gate="G$1" pin="3.3V"/>
 <wire x1="45.72" y1="170.18" x2="45.72" y2="175.26" width="0.1524" layer="91"/>
+<pinref part="GND2" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="D2" gate="G$1" pin="A"/>
@@ -7722,8 +7696,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="1"/>
-<wire x1="27.94" y1="297.18" x2="30.48" y2="297.18" width="0.1524" layer="91"/>
-<wire x1="30.48" y1="297.18" x2="30.48" y2="289.56" width="0.1524" layer="91"/>
+<wire x1="134.62" y1="231.14" x2="137.16" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="137.16" y1="231.14" x2="137.16" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -7760,8 +7734,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </segment>
 <segment>
 <pinref part="J3" gate="G$1" pin="1"/>
-<wire x1="73.66" y1="297.18" x2="76.2" y2="297.18" width="0.1524" layer="91"/>
-<wire x1="76.2" y1="297.18" x2="76.2" y2="289.56" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="231.14" x2="182.88" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="182.88" y1="231.14" x2="182.88" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="GND5" gate="1" pin="GND"/>
 </segment>
 <segment>
@@ -7783,6 +7757,15 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="233.68" y1="152.4" x2="233.68" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="233.68" y1="134.62" x2="261.62" y2="134.62" width="0.1524" layer="91"/>
 <junction x="261.62" y="134.62"/>
+<pinref part="IC1" gate="1" pin="!CTS"/>
+<wire x1="289.56" y1="180.34" x2="297.18" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="180.34" x2="297.18" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="297.18" y1="170.18" x2="332.74" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="170.18" x2="332.74" y2="134.62" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="134.62" x2="289.56" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="1" pin="TEST"/>
+<wire x1="289.56" y1="149.86" x2="289.56" y2="144.78" width="0.1524" layer="91"/>
+<junction x="289.56" y="144.78"/>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
@@ -7802,6 +7785,11 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <pinref part="U5" gate="G$1" pin="GND"/>
 <wire x1="416.56" y1="134.62" x2="416.56" y2="132.08" width="0.1524" layer="91"/>
 <pinref part="GND23" gate="1" pin="GND"/>
+<wire x1="388.62" y1="142.24" x2="388.62" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="388.62" y1="132.08" x2="416.56" y2="132.08" width="0.1524" layer="91"/>
+<junction x="416.56" y="132.08"/>
+<pinref part="U5" gate="G$1" pin="BOOTSEL"/>
+<wire x1="393.7" y1="142.24" x2="388.62" y2="142.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C19" gate="G$1" pin="2"/>
@@ -7835,13 +7823,13 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="GND"/>
-<wire x1="121.92" y1="294.64" x2="119.38" y2="294.64" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="294.64" x2="119.38" y2="289.56" width="0.1524" layer="91"/>
+<wire x1="228.6" y1="228.6" x2="226.06" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="228.6" x2="226.06" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
 <pinref part="J4" gate="G$1" pin="SHIELD"/>
-<wire x1="139.7" y1="299.72" x2="139.7" y2="289.56" width="0.1524" layer="91"/>
-<wire x1="139.7" y1="289.56" x2="119.38" y2="289.56" width="0.1524" layer="91"/>
-<junction x="119.38" y="289.56"/>
+<wire x1="246.38" y1="233.68" x2="246.38" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="246.38" y1="223.52" x2="226.06" y2="223.52" width="0.1524" layer="91"/>
+<junction x="226.06" y="223.52"/>
 </segment>
 <segment>
 <pinref part="C21" gate="G$1" pin="2"/>
@@ -7854,6 +7842,11 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <pinref part="R4" gate="G$1" pin="1"/>
 <wire x1="78.74" y1="109.22" x2="73.66" y2="109.22" width="0.1524" layer="91"/>
 <label x="73.66" y="109.22" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U4" gate="U$1" pin="PD5(T1)"/>
+<wire x1="299.72" y1="63.5" x2="304.8" y2="63.5" width="0.1524" layer="91"/>
+<label x="304.8" y="63.5" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -7968,8 +7961,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </segment>
 <segment>
 <pinref part="J1" gate="G$1" pin="2"/>
-<wire x1="27.94" y1="299.72" x2="33.02" y2="299.72" width="0.1524" layer="91"/>
-<label x="33.02" y="299.72" size="1.27" layer="95" xref="yes"/>
+<wire x1="134.62" y1="233.68" x2="139.7" y2="233.68" width="0.1524" layer="91"/>
+<label x="139.7" y="233.68" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="N$15" class="0">
@@ -8207,12 +8200,22 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="429.26" y1="167.64" x2="431.8" y2="167.64" width="0.1524" layer="91"/>
 <label x="431.8" y="167.64" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U4" gate="U$1" pin="PD3(INT1)"/>
+<wire x1="299.72" y1="68.58" x2="304.8" y2="68.58" width="0.1524" layer="91"/>
+<label x="304.8" y="68.58" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="EJECT_SD" class="0">
 <segment>
 <pinref part="J3" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="299.72" x2="78.74" y2="299.72" width="0.1524" layer="91"/>
-<label x="78.74" y="299.72" size="1.27" layer="95" xref="yes"/>
+<wire x1="180.34" y1="233.68" x2="185.42" y2="233.68" width="0.1524" layer="91"/>
+<label x="185.42" y="233.68" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U4" gate="U$1" pin="PD4(XCK/T0)"/>
+<wire x1="299.72" y1="66.04" x2="304.8" y2="66.04" width="0.1524" layer="91"/>
+<label x="304.8" y="66.04" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="UC_RESET" class="0">
@@ -8229,6 +8232,16 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="198.12" y1="45.72" x2="200.66" y2="45.72" width="0.1524" layer="91"/>
 <label x="200.66" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="C23" gate="G$1" pin="2"/>
+<wire x1="314.96" y1="162.56" x2="309.88" y2="162.56" width="0.1524" layer="91"/>
+<label x="314.96" y="162.56" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U5" gate="G$1" pin="RESET"/>
+<wire x1="429.26" y1="149.86" x2="431.8" y2="149.86" width="0.1524" layer="91"/>
+<label x="431.8" y="149.86" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="CSRM_RESET" class="0">
 <segment>
@@ -8239,20 +8252,13 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="139.7" y1="45.72" x2="139.7" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="R10" gate="G$1" pin="2"/>
-<pinref part="IC1" gate="1" pin="!RESET"/>
-<wire x1="254" y1="180.34" x2="261.62" y2="180.34" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="USB_VCC" class="0">
 <segment>
 <pinref part="J4" gate="G$1" pin="VBUS"/>
-<wire x1="121.92" y1="302.26" x2="119.38" y2="302.26" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="302.26" x2="119.38" y2="309.88" width="0.1524" layer="91"/>
-<wire x1="119.38" y1="309.88" x2="116.84" y2="309.88" width="0.1524" layer="91"/>
-<label x="116.84" y="309.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="228.6" y1="236.22" x2="226.06" y2="236.22" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="236.22" x2="226.06" y2="243.84" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="243.84" x2="223.52" y2="243.84" width="0.1524" layer="91"/>
+<label x="223.52" y="243.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <pinref part="FB3" gate="G$1" pin="P$2"/>
@@ -8268,8 +8274,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="D+"/>
-<wire x1="121.92" y1="297.18" x2="116.84" y2="297.18" width="0.1524" layer="91"/>
-<label x="116.84" y="297.18" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="228.6" y1="231.14" x2="223.52" y2="231.14" width="0.1524" layer="91"/>
+<label x="223.52" y="231.14" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="USB_DM" class="0">
@@ -8280,8 +8286,8 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </segment>
 <segment>
 <pinref part="J4" gate="G$1" pin="D-"/>
-<wire x1="121.92" y1="299.72" x2="116.84" y2="299.72" width="0.1524" layer="91"/>
-<label x="116.84" y="299.72" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="228.6" y1="233.68" x2="223.52" y2="233.68" width="0.1524" layer="91"/>
+<label x="223.52" y="233.68" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="GPS_ANTENNA" class="0">
@@ -8318,6 +8324,11 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <junction x="381" y="157.48"/>
 <label x="360.68" y="157.48" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U4" gate="U$1" pin="PD6(AIN0)"/>
+<wire x1="299.72" y1="60.96" x2="304.8" y2="60.96" width="0.1524" layer="91"/>
+<label x="304.8" y="60.96" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="N$14" class="0">
 <segment>
@@ -8331,29 +8342,10 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <wire x1="393.7" y1="149.86" x2="391.16" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$19" class="0">
-<segment>
-<pinref part="U5" gate="G$1" pin="BOOTSEL"/>
-<wire x1="393.7" y1="142.24" x2="391.16" y2="142.24" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$23" class="0">
-<segment>
-<pinref part="U5" gate="G$1" pin="RESET"/>
-<wire x1="429.26" y1="149.86" x2="431.8" y2="149.86" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="N$24" class="0">
 <segment>
 <pinref part="U5" gate="G$1" pin="PPS"/>
 <wire x1="429.26" y1="157.48" x2="431.8" y2="157.48" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$10" class="0">
-<segment>
-<pinref part="IC1" gate="1" pin="CBUS0"/>
-<wire x1="289.56" y1="165.1" x2="317.5" y2="165.1" width="0.1524" layer="91"/>
-<wire x1="317.5" y1="165.1" x2="317.5" y2="157.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GPS_CONNECTOR" class="0">
@@ -8416,12 +8408,6 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <pinref part="U2" gate="G$1" pin="EN"/>
 <wire x1="96.52" y1="109.22" x2="96.52" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="96.52" y1="73.66" x2="116.84" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$27" class="0">
-<segment>
-<pinref part="U4" gate="U$1" pin="PD6(AIN0)"/>
-<wire x1="299.72" y1="60.96" x2="304.8" y2="60.96" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$31" class="0">
@@ -8509,14 +8495,46 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <pinref part="J9" gate="G$1" pin="VDD"/>
 <pinref part="C20" gate="G$1" pin="1"/>
 <wire x1="436.88" y1="63.5" x2="406.4" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="406.4" y1="63.5" x2="398.78" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="406.4" y1="63.5" x2="401.32" y2="63.5" width="0.1524" layer="91"/>
 <junction x="406.4" y="63.5"/>
 <pinref part="FB5" gate="G$1" pin="P$2"/>
+</segment>
+</net>
+<net name="N$10" class="0">
+<segment>
+<pinref part="IC1" gate="1" pin="!DTR"/>
+<wire x1="289.56" y1="177.8" x2="294.64" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="177.8" x2="294.64" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="294.64" y1="162.56" x2="302.26" y2="162.56" width="0.1524" layer="91"/>
+<pinref part="C23" gate="G$1" pin="1"/>
 </segment>
 </net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="202,1,261.62,175.26,IC1,OSCI,,,,"/>
+<approved hash="202,1,289.56,175.26,IC1,!DSR,,,,"/>
+<approved hash="202,1,289.56,172.72,IC1,!DCD,,,,"/>
+<approved hash="202,1,289.56,170.18,IC1,!RI,,,,"/>
+<approved hash="202,1,261.62,180.34,IC1,!RESET,,,,"/>
+<approved hash="106,1,157.48,73.66,!CSRM_LED_SINK,,,,,"/>
+<approved hash="106,1,157.48,63.5,CSRM_GPIO1,,,,,"/>
+<approved hash="106,1,157.48,60.96,CSRM_GPIO2,,,,,"/>
+<approved hash="106,1,157.48,58.42,CSRM_GPIO3,,,,,"/>
+<approved hash="106,1,157.48,68.58,CSRM_OSC_OUT,,,,,"/>
+<approved hash="106,1,393.7,167.64,N$11,,,,,"/>
+<approved hash="106,1,393.7,160.02,N$12,,,,,"/>
+<approved hash="106,1,393.7,152.4,N$14,,,,,"/>
+<approved hash="106,1,393.7,149.86,N$18,,,,,"/>
+<approved hash="106,1,429.26,157.48,N$24,,,,,"/>
+<approved hash="113,1,441.96,222.085,FB6,,,,,"/>
+<approved hash="113,1,228.6,92.5449,FB2,,,,,"/>
+<approved hash="113,1,81.28,120.485,FB1,,,,,"/>
+<approved hash="113,1,236.22,204.305,FB3,,,,,"/>
+<approved hash="113,1,358.14,183.985,FB4,,,,,"/>
+<approved hash="113,1,396.24,64.6049,FB5,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 <compatibility>
