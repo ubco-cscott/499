@@ -1041,20 +1041,19 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 </symbol>
 <symbol name="SD_CARD_HOLDER">
 <description>part number: MEM2061, this is a sd card holder</description>
-<wire x1="5.08" y1="17.78" x2="-7.62" y2="17.78" width="0.1524" layer="94"/>
-<pin name="DAT2" x="-12.7" y="15.24" length="middle"/>
-<pin name="CD/DAT3" x="-12.7" y="12.7" length="middle"/>
-<pin name="CMD" x="-12.7" y="10.16" length="middle"/>
-<pin name="VDD" x="-12.7" y="7.62" length="middle"/>
-<pin name="CLK" x="-12.7" y="5.08" length="middle"/>
-<pin name="VSS" x="-12.7" y="2.54" length="middle"/>
-<pin name="DAT0" x="-12.7" y="0" length="middle"/>
-<pin name="DAT1" x="-12.7" y="-2.54" length="middle"/>
-<wire x1="5.08" y1="17.78" x2="5.08" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-7.62" y1="17.78" x2="-7.62" y2="-5.08" width="0.1524" layer="94"/>
-<wire x1="-7.62" y1="-5.08" x2="5.08" y2="-5.08" width="0.1524" layer="94"/>
-<text x="-7.62" y="18.796" size="1.778" layer="94">&gt;NAME</text>
-<text x="-7.62" y="-7.366" size="1.778" layer="94">&gt;VALUE</text>
+<wire x1="10.16" y1="10.16" x2="-2.54" y2="10.16" width="0.1524" layer="94"/>
+<pin name="CD" x="-7.62" y="7.62" visible="pin" length="middle"/>
+<pin name="CS" x="-7.62" y="5.08" visible="pin" length="middle"/>
+<pin name="MOSI" x="-7.62" y="2.54" visible="pin" length="middle"/>
+<pin name="VDD" x="-7.62" y="0" visible="pin" length="middle"/>
+<pin name="SCLK" x="-7.62" y="-2.54" visible="pin" length="middle"/>
+<pin name="GND" x="-7.62" y="-5.08" visible="pin" length="middle"/>
+<pin name="MISO" x="-7.62" y="-7.62" visible="pin" length="middle"/>
+<wire x1="10.16" y1="10.16" x2="10.16" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="10.16" x2="-2.54" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="-10.16" x2="10.16" y2="-10.16" width="0.1524" layer="94"/>
+<text x="-2.54" y="10.668" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-10.668" size="1.778" layer="96" align="top-left">&gt;VALUE</text>
 </symbol>
 <symbol name="BNC">
 <description>&lt;h3&gt;BNC Connector&lt;/h3&gt;
@@ -1363,14 +1362,13 @@ Source: http://focus.ti.com/docs/prod/folders/print/msp430fg4618.html</descripti
 <devices>
 <device name="" package="SD_CARD_HOLDER">
 <connects>
-<connect gate="G$1" pin="CD/DAT3" pad="CD1 CD2 P2"/>
-<connect gate="G$1" pin="CLK" pad="P5"/>
-<connect gate="G$1" pin="CMD" pad="P3"/>
-<connect gate="G$1" pin="DAT0" pad="P7"/>
-<connect gate="G$1" pin="DAT1" pad="P8"/>
-<connect gate="G$1" pin="DAT2" pad="P1"/>
+<connect gate="G$1" pin="CD" pad="CD1 CD2"/>
+<connect gate="G$1" pin="CS" pad="P2"/>
+<connect gate="G$1" pin="GND" pad="GND1 GND2 P6"/>
+<connect gate="G$1" pin="MISO" pad="P7"/>
+<connect gate="G$1" pin="MOSI" pad="P3"/>
+<connect gate="G$1" pin="SCLK" pad="P5"/>
 <connect gate="G$1" pin="VDD" pad="P4"/>
-<connect gate="G$1" pin="VSS" pad="GND1 GND2 P6"/>
 </connects>
 <technologies>
 <technology name=""/>
