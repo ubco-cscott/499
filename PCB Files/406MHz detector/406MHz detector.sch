@@ -8308,18 +8308,6 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <label x="378.46" y="71.12" size="1.27" layer="95" rot="MR180" xref="yes"/>
 </segment>
 </net>
-<net name="N$2" class="0">
-<segment>
-<pinref part="U4" gate="U$1" pin="PC4(ADC4/SDA)"/>
-<wire x1="299.72" y1="88.9" x2="304.8" y2="88.9" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$3" class="0">
-<segment>
-<pinref part="U4" gate="U$1" pin="PC5(ADC5/SCL)"/>
-<wire x1="299.72" y1="86.36" x2="304.8" y2="86.36" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="LINK_1" class="0">
 <segment>
 <pinref part="J12" gate="J$1" pin="1"/>
@@ -8348,11 +8336,14 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 </sheet>
 </sheets>
 <errors>
+<approved hash="104,1,261.62,187.96,IC1,VCC,N$20,,,"/>
 <approved hash="202,1,261.62,175.26,IC1,OSCI,,,,"/>
 <approved hash="202,1,289.56,175.26,IC1,!DSR,,,,"/>
 <approved hash="202,1,289.56,172.72,IC1,!DCD,,,,"/>
 <approved hash="202,1,289.56,170.18,IC1,!RI,,,,"/>
+<approved hash="104,1,261.62,185.42,IC1,VCCIO,INTERNAL_3.3V,,,"/>
 <approved hash="202,1,261.62,180.34,IC1,!RESET,,,,"/>
+<approved hash="104,1,228.6,236.22,J4,VBUS,USB_VCC,,,"/>
 <approved hash="106,1,157.48,73.66,!CSRM_LED_SINK,,,,,"/>
 <approved hash="106,1,157.48,63.5,CSRM_GPIO1,,,,,"/>
 <approved hash="106,1,157.48,60.96,CSRM_GPIO2,,,,,"/>
@@ -8362,13 +8353,12 @@ Source: http://www.ftdichip.com/Documents/DataSheets/DS_FT232R_v104.pdf</descrip
 <approved hash="106,1,393.7,160.02,N$12,,,,,"/>
 <approved hash="106,1,393.7,152.4,N$14,,,,,"/>
 <approved hash="106,1,393.7,149.86,N$18,,,,,"/>
-<approved hash="106,1,429.26,157.48,N$24,,,,,"/>
-<approved hash="113,1,441.96,222.085,FB6,,,,,"/>
-<approved hash="113,1,228.6,92.5449,FB2,,,,,"/>
-<approved hash="113,1,81.28,120.485,FB1,,,,,"/>
-<approved hash="113,1,236.22,204.305,FB3,,,,,"/>
-<approved hash="113,1,358.14,183.985,FB4,,,,,"/>
-<approved hash="113,1,396.24,64.6049,FB5,,,,,"/>
+<approved hash="113,1,441.96,222.066,FB6,,,,,"/>
+<approved hash="113,1,228.6,92.5259,FB2,,,,,"/>
+<approved hash="113,1,236.22,204.286,FB3,,,,,"/>
+<approved hash="113,1,358.14,183.966,FB4,,,,,"/>
+<approved hash="113,1,419.1,74.7459,FB5,,,,,"/>
+<approved hash="115,1,160.02,78.74,CSRM_PPS,,,,,"/>
 </errors>
 </schematic>
 </drawing>

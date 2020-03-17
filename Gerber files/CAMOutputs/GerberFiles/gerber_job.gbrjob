@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2020-02-16T03:36:16Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.3.0"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.671119,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "406MHz detector"
+        },
+        "Owner": "Connor Scott <connor.scott@myokanagan.bc.ca>",
+        "Size": {
+            "X": 177.8,
+            "Y": 96.52
+        }
+    }
+}
