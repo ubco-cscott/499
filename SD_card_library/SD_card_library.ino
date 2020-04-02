@@ -22,9 +22,18 @@
 
 File myFile;
 
+
+
+
 void setup() {
   // Open serial communications and wait for port to open:
-  Serial.begin(9600);
+  
+  pinMode(10,OUTPUT);
+  pinMode(11,OUTPUT);
+  pinMode(12,OUTPUT);
+  pinMode(13,OUTPUT);
+  Serial.begin(115200);
+  
   while (!Serial) {
     ; // wait for serial port to connect. Needed for native USB port only
   }
@@ -32,7 +41,7 @@ void setup() {
 
   Serial.print("Initializing SD card...");
 
-  if (!SD.begin(4)) {
+  if (!SD.begin(10)) {
     Serial.println("initialization failed!");
     while (1);
   }
@@ -56,6 +65,9 @@ void setup() {
   
   myFile.close();
 
+  
+  
+  
   // Check to see if the file exists:
   if (SD.exists("CAPSTONE.txt")) {
     Serial.println("our file 'capstone' exists.");
@@ -64,6 +76,10 @@ void setup() {
   }
   myFile.println("this is simple text");
   
+
+
+
+
 }
 void loop() {
   // nothing happens after setup finishes.
