@@ -140,8 +140,12 @@ void setup() {
   
 }
 void loop() {
-  read_gps();
+  //read_gps();
   read_csrm();
+  if (Serial.available()> 0){
+    delay(500);
+    read_gps();
+    }
 }
 
 void read_gps() {
