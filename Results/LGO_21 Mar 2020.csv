@@ -1,0 +1,2 @@
+,Time Stamp,LUT ID,Satellite ID,Pass ID,Type,Beacon ID,Rx Time,Time Offset (ns),Frequency (Hz),Freq Offset (Hz),Freq Bandwidth (Hz),CNR (dB-Hz),SNR (dB-Hz),Mod Index (rad),Short Msg Index,FS Message Index,FS Bit Offset,Bit Errors Field1,Bit Errors Field2,Bit Errors Fsynch,Bit Rate (bps),Beacon Message
+1,2020/081 21:44:18.939,3161,12,57304,0001,A79C0 00000 00001,2020/081 21:44:18.939,0,406027022.328,0.000,8.583,30.550,37.575,1.297,0.246,0,6092,9,9,0,400.083,FFFE2F 53CE00 000000 000D14 8E50F1 566BF9
